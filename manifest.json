@@ -1,6 +1,6 @@
 {
   "name": "Cambio ARS → UYU",
-  "short_name": "Cambio",
+  "short_name": "./",
   "description": "Convertidor de pesos argentinos a uruguayos",
   "start_url": "/cambio/",
   "display": "standalone",
