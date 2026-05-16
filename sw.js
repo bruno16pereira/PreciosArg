@@ -1,9 +1,8 @@
-const CACHE = 'cambio-v1';
+const CACHE = 'cambio-v2';
 const ASSETS = [
-  '/cambio/',
-  '/cambio/index.html',
-  '/cambio/manifest.json',
-  'https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@700;800&display=swap'
+  './',
+  './index.html',
+  './manifest.json'
 ];
 
 self.addEventListener('install', e => {
@@ -22,6 +21,6 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(cached => cached || fetch(e.request).catch(() => caches.match('/cambio/')))
+    caches.match(e.request).then(cached => cached || fetch(e.request))
   );
 });
